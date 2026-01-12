@@ -308,18 +308,16 @@ In a Micro-App setup, the project is split into three distinct categories:
 Unlike a Monorepo, each Micro-App typically has its own lifecycle:
 
 ```text
-/repository-shell-app
-  ├── lib/main.dart (Global ProviderScope)
-  └── pubspec.yaml (Depends on Micro-Apps via Git or Private Pub Server)
-
-/repository-payment-app
-  ├── example/ (Standalone runner for Payment team)
-  ├── lib/ (Feature logic + Providers)
-  └── pubspec.yaml
-
-/repository-core-ui
-  ├── lib/ (Design system, Theme providers)
-  └── pubspec.yaml
+/org-root
+├── core_package/ (Repo 1)          # Shared UI, Auth State, Network
+├── payment_micro_app/ (Repo 2)    # Independent Repo
+│   ├── example/                    # Standard Flutter app for dev
+│   ├── lib/                        # Payment feature logic
+│   └── pubspec.yaml
+├── search_micro_app/ (Repo 3)     # Independent Repo
+└── shell_app/ (Repo 4)            # The "Glue" app
+    ├── pubspec.yaml                # Depends on core, payment, and search
+    └── lib/main.dart
 
 ```
 
