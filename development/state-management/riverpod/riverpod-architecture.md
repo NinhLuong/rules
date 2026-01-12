@@ -375,7 +375,7 @@ To prevent one Micro-App from accidentally breaking another, use **Nested Provid
 | --- | --- | --- |
 | **Repo Strategy** | Single Repository | Multiple Repositories |
 | **Team Size** | 2–5 Teams | 10+ Teams |
-| **Build Time** | Increases with app size | Faster (Build only your Micro-App) |
+| **Build Time** | Slows down as the project gets bigger | Fast for individual modules, but complex when building the overall app. |
 | **Refactoring** | Easy (IDE handles all) | Hard (Requires cross-repo coordination) |
 | **Best For** | Most Enterprise Apps | Super-Apps (Grab, Shopee, WeChat) |
 
