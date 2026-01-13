@@ -58,6 +58,7 @@ This layer answers: **What is displayed and how does the user interact?**
 
 ```text
 lib/
+├──main.dart
 ├── data/
 │   ├── datasources/
 │   │   ├── user_remote_datasource.dart
@@ -99,6 +100,7 @@ lib/
 
 ```text
 lib/
+├──main.dart
 ├── features/
 │   ├── auth/
 │   │   ├── data/
