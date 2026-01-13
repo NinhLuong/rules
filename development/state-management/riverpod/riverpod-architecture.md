@@ -195,7 +195,7 @@ my_app/
 ├── lib/                         # Main app
 │   ├── app.dart
 │   └── main.dart
-├──  test/
+├── test/
 │    ├──  unit_test/
 │    └── integration_test/
 └── pubspec.yaml
