@@ -331,7 +331,7 @@ Unlike a Monorepo, each Micro-App typically has its own lifecycle:
 ├── payment_micro_app/ (Repo 2)    # Independent Repo
 │   ├── example/                    # Standard Flutter app for dev
 │   ├── lib/                        # Payment feature logic
-│.  ├── test/
+│   ├── test/
 │   └── pubspec.yaml
 ├── search_micro_app/ (Repo 3)     # Independent Repo
 └── shell_app/ (Repo 4)            # The "Glue" app
