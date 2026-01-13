@@ -120,10 +120,15 @@ lib/
 │       ├── data/
 │       ├── domain/
 │       └── presentation/
-└── shared/
-    ├── data/
-    ├── domain/
-    └── presentation/
+├── shared/
+│   ├── data/
+│   ├── domain/
+│   └── presentation/
+└── test/
+    ├── unit_test/
+    └── integration_test/
+
+
 ```
 
 ### Dependency Rule
@@ -155,13 +160,20 @@ my_app/
 │   │   │   ├── domain/
 │   │   │   ├── presentation/
 │   │   │   └── module.dart      # Module exports
+│   │   └── test/ 
+│   │   │    ├──  unit_test/
+│   │   │    └── integration_test/
 │   │   └── pubspec.yaml
+        
 │   ├── user/                    # User management module
 │   │   ├── lib/
 │   │   │   ├── data/
 │   │   │   ├── domain/
 │   │   │   ├── presentation/
 │   │   │   └── module.dart
+│   │   └── test/
+│   │   │    ├──  unit_test/
+│   │   │    └── integration_test/
 │   │   └── pubspec.yaml
 │   ├── dashboard/               # Dashboard module
 │   │   ├── lib/
@@ -169,6 +181,9 @@ my_app/
 │   │   │   ├── domain/
 │   │   │   ├── presentation/
 │   │   │   └── module.dart
+│   │   └── test/
+│   │   │    ├──  unit_test/
+│   │   │    └── integration_test/
 │   │   └── pubspec.yaml
 │   └── shared/                  # Shared utilities
 │       ├── lib/
@@ -180,6 +195,9 @@ my_app/
 ├── lib/                         # Main app
 │   ├── app.dart
 │   └── main.dart
+│   test/
+│    ├──  unit_test/
+│    └── integration_test/
 └── pubspec.yaml
 ```
 
@@ -313,10 +331,12 @@ Unlike a Monorepo, each Micro-App typically has its own lifecycle:
 ├── payment_micro_app/ (Repo 2)    # Independent Repo
 │   ├── example/                    # Standard Flutter app for dev
 │   ├── lib/                        # Payment feature logic
+│.  ├── test/
 │   └── pubspec.yaml
 ├── search_micro_app/ (Repo 3)     # Independent Repo
 └── shell_app/ (Repo 4)            # The "Glue" app
     ├── pubspec.yaml                # Depends on core, payment, and search
+    ├── test/
     └── lib/main.dart
 
 ```
