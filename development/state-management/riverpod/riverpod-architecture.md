@@ -196,7 +196,7 @@ my_app/
 │   ├── app.dart
 │   └── main.dart
 ├── test/
-│    ├──  unit_test/
+│    ├── unit_test/
 │    └── integration_test/
 └── pubspec.yaml
 ```
